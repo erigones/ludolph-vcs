@@ -39,7 +39,7 @@ class Gitlab(LudolphPlugin):
 
         for commit in data.get('commits', []):
             commit['message'] = commit.get('message', '').strip()
-            msg.append('\t * {id:.8}: __{message}__ ({author[name]})'.format(**commit))
+            msg.append('\t * {id:.8}: {message} ({author[name]})'.format(**commit))
 
         self._room_message(msg)
 
