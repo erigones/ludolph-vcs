@@ -15,7 +15,7 @@ from ludolph.web import webhook, request, abort
 logger = logging.getLogger(__name__)
 
 
-class GitHub(LudolphPlugin):
+class Github(LudolphPlugin):
     """
     Ludolph: GitHub integration.
     """
