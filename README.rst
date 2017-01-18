@@ -3,7 +3,7 @@ ludolph-vcs
 
 `Ludolph <https://github.com/erigones/Ludolph>`_: vcs plugin
 
-VCS plugin that provides notifications for Ludolph from GitHub and GitLab. Ludolph has to be on a public IP (URL) where VCS provider will POST data to a `Ludolph's webhook <https://github.com/erigones/Ludolph/wiki/Webhooks-and-cron-jobs>_`. Make sure Ludolph's webserver can receive this message. We do recommend using a proxy server in front of Ludolph's webserver in order not to expose it to public internet.
+VCS plugin that provides notifications for Ludolph from GitHub and GitLab. Ludolph has to be on a public IP (URL) where VCS provider will POST data to a `Ludolph's webhook <https://github.com/erigones/Ludolph/wiki/Webhooks-and-cron-jobs>`_. Make sure Ludolph's webserver can receive this message. We do recommend using a proxy server in front of Ludolph's webserver in order not to expose it to public internet.
 
 .. image:: https://badge.fury.io/py/ludolph-vcs.png
     :target: http://badge.fury.io/py/ludolph-vcs
