@@ -56,7 +56,7 @@ class Gitlab(LudolphPlugin):
         return 'OK'
 
     @webhook('/gitlab-web-hook', methods=('POST',))
-    def web_hook(self):
+    def gitlab_web_hook(self):
         event = request.headers.get('X-Gitlab-Event', None)
         logger.info('Incoming GitLab Event: %s', event)
 
