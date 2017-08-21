@@ -61,7 +61,13 @@ class Github(LudolphPlugin):
         return 'OK'
 
     def _event_issue_handler(self, data):
-        msg = ['**[{repository[name]}]** {action} issue: #{issue[number]} {issue[title]} '
+
+        if data.get('assignee', None) and 'login' in data['assignee']:
+            data['to_whom'] = ' to {assignee[login]}'.format(**data)
+        else:
+            data['to_whom'] = ''
+
+        msg = ['**[{repository[name]}]** {action} issue{to_whom}: #{issue[number]} {issue[title]} '
                '\n\t {issue[html_url]}'.format(**data)]
 
         self._room_message(msg)
